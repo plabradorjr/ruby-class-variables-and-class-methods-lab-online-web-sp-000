@@ -26,6 +26,16 @@ class Song
     end
 
 
+    if @@artist_count.keys.include?(:artist)
+      count_artist = @@artist_count[:artist]
+      updated_artist = count_artist + 1
+      @@artist_count[:artist] = updated_artist
+    else
+      @@artist_count[:artist] = 1
+    end
+
+
+
   end
 
 
