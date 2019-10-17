@@ -19,10 +19,10 @@ class Song
     @@genres << genre unless @@genres.include?(genre)
     @@artists << artist unless @@artists.include?(artist)
 
-    if @@genre_count.keys.include?("genre")
-      @@genre_count["genre"] += 1
+    if @@genre_count.keys.include?(genre)
+      @@genre_count["{genre}"] += 1
     else
-      @@genre_count["genre"] = 1
+      @@genre_count["{genre}"] = 1
     end
 
 
