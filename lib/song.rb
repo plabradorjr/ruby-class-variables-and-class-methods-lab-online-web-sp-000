@@ -20,16 +20,16 @@ class Song
     @@artists << artist unless @@artists.include?(artist)
 
     if @@genre_count.keys.include?(:genre)
-      @@genre_count[:"#{genre}"] += 1
+      @@genre_count["genre"] += 1
     else
-      @@genre_count[:"#{genre}"] = 1
+      @@genre_count["genre"] = 1
     end
 
 
     if @@artist_count.keys.include?(:artist)
-      @@artist_count[:"#{artist}"] += 1
+      @@artist_count["artist"] += 1
     else
-      @@artist_count[:"#{artist}"] = 1
+      @@artist_count["artist"] = 1
     end
 
   end
