@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
 
   attr_accessor :name, :artist, :genre
@@ -17,6 +19,7 @@ class Song
     @@genres << genre unless @@genres.include?(genre)
     @@artists << artist unless @@artists.include?(artist)
 
+    binding.pry 
     if @@genre_count.keys.include?(:genre)
       @@genre_count[:genre] += 1
     else
