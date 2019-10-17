@@ -19,18 +19,17 @@ class Song
     @@genres << genre unless @@genres.include?(genre)
     @@artists << artist unless @@artists.include?(artist)
 
-    binding.pry 
     if @@genre_count.keys.include?(:genre)
-      @@genre_count[:genre] += 1
+      @@genre_count[:"#{genre}"] += 1
     else
-      @@genre_count[:genre] = 1
+      @@genre_count[:"#{genre}"] = 1
     end
 
 
     if @@artist_count.keys.include?(:artist)
-      @@artist_count[:artist] += 1
+      @@artist_count[:"#{artist}"] += 1
     else
-      @@artist_count[:artist] = 1
+      @@artist_count[:"#{artist}"] = 1
     end
 
   end
